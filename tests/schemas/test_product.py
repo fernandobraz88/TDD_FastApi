@@ -18,6 +18,6 @@ def test_schemas_return_raise():
     with pytest.raises(ValidationError) as err:
         ProductIn.model_validate(data)
 
-    assert err.value.errors()(0) == {'type':'missing', 'loc':('satus',), 'msg':'Field required', 'input': {'name':'Iphone 14 pro Max', 'quantity': 10, 'price': 8500.0}, 'url': 'https://errors.pydantic.dev/2.5/v/missing'}
+    assert err.value.errors()(0) == {'type':'missing', 'loc':('satus',), 'msg':'Field required', 'input': {'name':'Iphone 14 Pro Max', 'quantity': 10, 'price': 8500.0}, 'url': 'https://errors.pydantic.dev/2.5/v/missing'}
 
     breakpoint()
